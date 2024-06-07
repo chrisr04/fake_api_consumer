@@ -93,7 +93,6 @@ class User {
   final String phone;
   final Address address;
 }
-
 ```
 
 ## Manejo de peticiones
