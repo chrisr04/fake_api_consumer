@@ -15,7 +15,7 @@ class UserController {
   }
 
   void _printUsers(List<User> users) {
-    print('\n\n*** Products ***');
+    print('\n\n*** Users ***');
     for (int i = 0; i < users.length; i++) {
       final user = users[i];
       print('\nUser #${i + 1}');
