@@ -8,7 +8,7 @@ import 'package:fake_api_consumer/core/utils/error_handler.dart';
 class HttpClient extends BaseClient {
   HttpClient(
     this._client, {
-    required this.baseUrl,
+    this.baseUrl = '',
     this.baseHeaders = const {},
     this.interceptors = const [],
   });

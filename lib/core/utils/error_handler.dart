@@ -3,7 +3,7 @@ import 'package:fake_api_consumer/core/errors/network_exception/network_exceptio
 import 'package:http/http.dart';
 
 class ErrorHandler {
-  static Future<NetworkException> getError(BaseResponse response) async {
+  static Future<NetworkException> getError(Response response) async {
     final error = await ErrorHandler.getErrorMessage(response);
     switch (response.statusCode) {
       case 400:
@@ -21,8 +21,8 @@ class ErrorHandler {
     }
   }
 
-  static Future<String> getErrorMessage(BaseResponse response) async {
-    final body = (response as Response).body;
+  static Future<String> getErrorMessage(Response response) async {
+    final body = response.body;
     try {
       final error = jsonDecode(body);
       if (error is Map<String, dynamic> && error.containsKey('message')) {

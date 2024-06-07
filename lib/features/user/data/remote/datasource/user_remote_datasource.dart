@@ -9,7 +9,7 @@ class UserRemoteDataSource {
   final HttpClient _http;
 
   Future<List<UserModel>> getAllUsers() async {
-    final url = _http.url('/users/');
+    final url = _http.url('/users');
     final response = await _http.get(url);
     final body = jsonDecode(response.body) as List;
     final users = body.map((e) => UserModel.fromJson(e)).toList();

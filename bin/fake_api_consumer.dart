@@ -2,7 +2,7 @@ import 'package:http/http.dart';
 import 'package:fake_api_consumer/fake_api_consumer.dart';
 
 void main(List<String> arguments) async {
-  final HttpClient http = HttpClient(
+  final http = HttpClient(
     Client(),
     baseUrl: 'https://fakestoreapi.com',
   );
