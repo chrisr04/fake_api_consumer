@@ -112,7 +112,7 @@ final http = HttpClient(
 
 Future<List<ProductModel>> getAllProducts() async {
   final url = http.url('/products');
-  final response = await _http.get(url);
+  final response = await http.get(url);
   final body = jsonDecode(response.body) as List;
   final products = body.map((e) => ProductModel.fromJson(e)).toList();
   return products;
