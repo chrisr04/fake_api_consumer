@@ -10,7 +10,7 @@ class LogInterceptor extends HttpInterceptor {
     print('method: ${request.method}');
     print('headers: {');
     for (final key in request.headers.keys) {
-      print(' $key:${request.headers[key]}');
+      print(' $key: ${request.headers[key]}');
     }
     print('}');
     print('body: ${request.body}\n');
@@ -26,7 +26,7 @@ class LogInterceptor extends HttpInterceptor {
     if (response.request != null) {
       print('headers: {');
       for (final key in response.headers.keys) {
-        print(' $key:${response.request?.headers[key]}');
+        print(' $key: ${response.request?.headers[key]}');
       }
       print('}');
     }
@@ -46,7 +46,7 @@ class LogInterceptor extends HttpInterceptor {
     if (response.request != null) {
       print('headers: {');
       for (final key in response.headers.keys) {
-        print(' $key:${response.request?.headers[key]}');
+        print(' $key: ${response.request?.headers[key]}');
       }
       print('}');
     }
